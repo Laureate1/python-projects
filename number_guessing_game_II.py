@@ -23,7 +23,7 @@ def get_difficulty():
 def play_game():
     global high_score
     
-    print("\n🎮 Welcome to the Number Guessing Game!")
+    print("\n🎮 Welcome to the Number Guessing Game.")
     print("----------------------------------------")
     
     # Get difficulty
@@ -49,9 +49,9 @@ def play_game():
                 print("💡 Hint: The number is ODD!")
         
         if guess < secret_number:
-            print(f"📉 Too low! {remaining} attempts remaining.")
+            print(f"Too low! {remaining} attempts remaining.")
         elif guess > secret_number:
-            print(f"📈 Too high! {remaining} attempts remaining.")
+            print(f"Too high! {remaining} attempts remaining.")
         else:
             print(f"\n🎉 CORRECT!! You guessed it in {attempts} attempts!")
             
@@ -70,7 +70,5 @@ def play_game():
         play_game()
     else:
         print(f"\n👋 Thanks for playing!")
-        print(f"🏆 Your Best Score Ever: {high_score} attempts!")
-        print("See you next time Chisom! 🥹🙌🏽")
-
+        print(f"🏆 Your Best Score: {high_score} attempts!")
 play_game()
