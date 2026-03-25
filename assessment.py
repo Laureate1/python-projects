@@ -40,4 +40,6 @@ print(foods.split(","))
 words = ["I", "love", "Python"]
 print(" ".join(words))
 
+"developer".capitalize()
+print("developer".capitalize())
 

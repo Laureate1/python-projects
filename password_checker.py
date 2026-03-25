@@ -5,23 +5,40 @@
 # 2. Contains both uppercase and lowercase letters
 # 3. Contains at least one digit
 # 4. Contains at least one special character (e.g., !, @, #, $, etc.)
-import re   
 
-def check_password_strength(password):
-    # Check if password is at least 8 characters long
-    if len(password) < 8:
-        return False
+print("Welcome to the Password Strength Checker! 🔐")
+password = input("Enter your password: ")
+print(f"\nChecking password: {password}")
 
-    # Check if password contains both uppercase and lowercase letters
-    if not re.search(r'[a-z]', password) or not re.search(r'[A-Z]', password):
-        return False
+score = 0
 
-    # Check if password contains at least one digit
-    if not re.search(r'\d', password):
-        return False
+if len(password) >= 8:
+    score += 2
 
-    # Check if password contains at least one special character
-    if not re.search(r'[!@#$%^&*()-+]', password):
-        return False
+if any(char.isupper() for char in password):
+    score += 2
 
-    return True
+if any(char.islower() for char in password):
+    score += 2
+
+if any(char.isdigit() for char in password):
+    score += 2
+
+if any(char in "!@#$%^&*()_+-=[]{}|;':,./<>?" for char in password):
+    score += 2
+
+print(f"Your score is: {score}/10")
+
+if score <= 4:
+    print("Password Strength: WEAK🔴")
+    print("Tips to improve:")
+    print("- Add uppercase letters")
+    print("- Add numbers")
+    print("- Add special characters like !@#$%")
+elif score <= 8:
+    print("Password Strength: MODERATE🟡")
+    print("Getting better! Try adding more variety to make it stronger.")
+else:
+    print("Password Strength: STRONG💚")
+    print("Great job! Your password is very secure.")   
+print("\nThank you for using the Password Strength Checker, Stay safe online!")
