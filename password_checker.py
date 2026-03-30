@@ -6,7 +6,7 @@
 # 3. Contains at least one digit
 # 4. Contains at least one special character (e.g., !, @, #, $, etc.)
 
-print("Welcome to the Password Strength Checker! 🔐")
+print("Welcome to the Password Strength Checker")
 password = input("Enter your password: ")
 print(f"\nChecking password: {password}")
 
