@@ -30,15 +30,15 @@ if any(char in "!@#$%^&*()_+-=[]{}|;':,./<>?" for char in password):
 print(f"Your score is: {score}/10")
 
 if score <= 4:
-    print("Password Strength: WEAK🔴")
+    print("Password Strength: WEAK")
     print("Tips to improve:")
     print("- Add uppercase letters")
     print("- Add numbers")
     print("- Add special characters like !@#$%")
 elif score <= 8:
-    print("Password Strength: MODERATE🟡")
+    print("Password Strength: MODERATE")
     print("Getting better! Try adding more variety to make it stronger.")
 else:
-    print("Password Strength: STRONG💚")
+    print("Password Strength: STRONG")
     print("Great job! Your password is very secure.")   
 print("\nThank you for using the Password Strength Checker, Stay safe online!")
